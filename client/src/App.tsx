@@ -1,3 +1,5 @@
+// Signal / Shelf direction: the global shell stays quiet so the dark editorial
+// landing page can own the product shelf and cobalt conversion signals.
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
