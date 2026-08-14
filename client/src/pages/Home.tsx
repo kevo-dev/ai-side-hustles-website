@@ -1,3 +1,5 @@
+"use client";
+
 // Signal / Shelf direction: a dark editorial publishing stage, paper-white proof cards,
 // cobalt action signals, and a product-first conversion flow. This page owns the shelf,
 // blueprint cards, prompt specimen, and launch timeline signature elements.
@@ -18,8 +20,6 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-
-const coverUrl = "/manus-storage/ai-side-hustles-cover_17d85100.png";
 
 const blueprints = [
   ["01", "Real estate follow-up", "A 30-prompt kit for independent agents who want a starting point for everyday lead messages.", "PROMPT KIT"],
@@ -56,6 +56,19 @@ function SignalMark({ small = false }: { small?: boolean }) {
     <span aria-hidden="true" className={`signal-mark ${small ? "signal-mark--small" : ""}`}>
       <i /><i /><i /><b />
     </span>
+  );
+}
+
+function GuideCard({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className={`guide-card ${compact ? "guide-card--compact" : ""}`} aria-label="AI Side Hustles field guide cover">
+      <div className="guide-card__eyebrow">THE NO-BUDGET PRODUCT SPRINT</div>
+      <h3>AI SIDE<br /><span>HUSTLES</span></h3>
+      <p>10 Digital Products You Can Create With Free AI Tools and Sell Online</p>
+      <div className="guide-card__chips"><span>01 CREATE</span><span>02 PACKAGE</span><span>03 PUBLISH</span></div>
+      <div className="guide-card__rule" />
+      <div className="guide-card__footer">CREATE. PACKAGE. PUBLISH. START.</div>
+    </div>
   );
 }
 
@@ -132,7 +145,7 @@ export default function Home() {
               <div className="shelf-label absolute -left-2 top-[-28px] font-mono text-[10px] font-bold uppercase tracking-[0.18em] text-blue-200/70">The field guide / 01</div>
               <div className="hero-cover-wrap">
                 <div className="hero-cover-shadow" />
-                <img src={coverUrl} alt="AI Side Hustles ebook cover" className="hero-cover" />
+                <GuideCard />
                 <div className="cover-sticker cover-sticker--top">CREATE</div>
                 <div className="cover-sticker cover-sticker--bottom">PACKAGE / PUBLISH</div>
               </div>
@@ -164,7 +177,7 @@ export default function Home() {
               <div className="paper-visual paper-visual--back" />
               <div className="paper-visual paper-visual--mid" />
               <div className="paper-visual paper-visual--front">
-                <img src={coverUrl} alt="The AI Side Hustles field guide displayed as a paper cover" />
+                <GuideCard compact />
                 <div className="paper-caption"><span>AI SIDE HUSTLES</span><span>FIELD GUIDE / 2026</span></div>
               </div>
               <div className="absolute -bottom-8 -right-4 z-10 w-40 rotate-[4deg] bg-navy p-4 text-white shadow-2xl sm:-right-10">
