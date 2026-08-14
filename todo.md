@@ -6,4 +6,7 @@
 - [x] Preserve the existing product asset and metadata with Next.js-safe asset handling.
 - [x] Remove or isolate Vite-only runtime assumptions without touching backend/server logic.
 - [x] Run type-check, lint/build, and responsive visual verification.
-- [ ] Save a migration checkpoint and document any follow-up configuration.
+- [x] Save a migration checkpoint and document any follow-up configuration.
+- [ ] Initialize the local Git repository with the migrated project state.
+- [ ] Create a private GitHub repository and push the main branch.
+- [ ] Verify the remote repository URL and uploaded commit.
